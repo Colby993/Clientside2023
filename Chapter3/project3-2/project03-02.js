@@ -31,7 +31,7 @@ htmlCode=" ";
 i=0;
 for(i=0;i<captions.length;i++)
 {
-      htmlCode +="<figure>
+      htmlCode += <figure>
       <img alt='' src='slidei.jpg'/>
             <figcaption>captions[i]</figcaption>
       </figure>

@@ -32,8 +32,11 @@ i=0;
 for(i=0;i<captions.length;i++)
 {
       htmlCode += `<figure>
+      
       <img alt=' ' src='slide${i}.jpg' />
+      
       <figcaption>${captions[i]}</figcaption>
+      
       </figure>`
 
 

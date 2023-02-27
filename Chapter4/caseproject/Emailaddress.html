@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 7th Edition
+      Chapter 4
+      caseproject.html
+
+      Author: Colby Stewart 
+      Date:02/26/2023   
+
+      Filename: Emailaddress.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Emailaddress</title>
+<html lang="en">
+<body>
+   <h1>Enter your email here</h1>
+<form action="#" onsubmit="return validate()">
+<div>
+<input type="text" name="email" id="email" />
+<div id="email_error"></div>
+</div>
+<div>
+<input type="radio" name="gender" id="gender_male" value="male" /> Male
+<input type="radio" name="gender" id="gender_female" value="female" />Female
+<div id="gender_error"></div>
+</div>
+<input type="submit" value="submit" />
+</form>
+<main>In chapter 4 there is a bunch of debugging mathods like interpreting error message, 
+   Tracing errors with window.alert , 
+   Tracing errors with console.log,or 
+   you can debug on the broswer by clicking inspect and going to concole
+   <h1>I used the interpreting Error Message for this website 
+      if you don't type a correct email or select a gender a error Message 
+      shows up under the spot thats not filled out right!</h1> </main>
+<script>
+const email = document.querySelector("#email");
+const emailError = document.querySelector("#email_error");
+email.addEventListener("input", () => reset(emailError));
+const genderMale = document.querySelector("#gender_male");
+const genderFemale = document.querySelector("#gender_female");
+const genderError = document.querySelector("#gender_error");
+genderMale.addEventListener("input", () => reset(genderError));
+genderFemale.addEventListener("input", () => reset(genderError));
+function validate() {
+
+   let res = true;
+try{
+   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value) === false) {
+      emailError.innerHTML = "invalid email address";
+      res = false;
+     
+   }
+}catch(err){
+   emailError.innerHTML =err;
+   emailError.innerHTML = "";
+   
+   
+   }
+   
+
+try{
+if ((genderMale.checked || genderFemale.checked) == false) {
+
+   genderError.innerHTML = "please select gender";
+   res = false;
+}
+}catch(er){
+   genderError.innerHTML =err;
+   genderError.innerHTML = "";
+
+}
+
+console.log(res);
+
+return res;
+
+}
+
+function reset(element) {
+
+   element.innerHTML = "";
+
+}
+
+</script>
+
+</body>
+
+</html>

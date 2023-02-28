@@ -14,7 +14,7 @@ function validate() {
 
    let res = true;
 try{
-   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value) === false) {
+   if (RegExp.test(email.value) === false) {
       emailError.innerHTML = "invalid email address";
       res = false;
      

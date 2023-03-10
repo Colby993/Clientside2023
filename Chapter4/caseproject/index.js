@@ -20,7 +20,7 @@ try{
      
    }
 }catch(err){
-   mailError.innerHTML =err;
+   emailError.innerHTML =err;
    emailError.innerHTML = "";
    
    

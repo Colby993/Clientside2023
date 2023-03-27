@@ -1,3 +1,20 @@
+window.onload = function() {
+      var userAgent = navigator.userAgent;
+      var language = navigator.language;
+      var platform = navigator.platform;
+
+      var screenWidth = screen.width;
+      var screenHeight = screen.height;
+      var colorDepth =  screen.colorDepth;
+
+
+      document.getElementById("userAgent").innerHTML = "User agent: "+ userAgent;
+      document.getElementById("language").innerHTML = "Language: "+ language;
+      document.getElementById("platform").innerHTML = "Platform: "+ platform;
+      document.getElementById("screenWidth").innerHTML = "Screen width: "+ screenWidth;
+      document.getElementById("screenHeight").innerHTML = "Screen height: "+ screenHeight;
+      document.getElementById("colorDepth").innerHTML = "Screen color depth: "+ colorDepth;
+}
 function myFunction() {
       var img = document.getElementById('img');
       var answer = document.getElementById('answer').value.toLowerCase();
@@ -59,7 +76,7 @@ function FToC(degree){
    let pwd2 = document.getElementById("pwd2").value;
    let regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
    if (regex.exec(pwd) == null) {
-       alert("Your password must be at least 8 characters with at least one letter and one number.");
+       alert("Your password must be at least 7 characters with at least one letter and one number.");
        return false;
    }
    
@@ -72,4 +89,5 @@ function FToC(degree){
      return true;
    };
    
+
             

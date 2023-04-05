@@ -36,7 +36,7 @@ let signupForm = document.getElementById("signup");
     }
     else if(!regex1.test(pwd))
     {
-        feedback.innerText = 'Your password must include an lowercase letter.';
+        feedback.innerText = 'Your password must include an uppercase letter.';
     }
     else if(!regex2.test(pwd))
     {

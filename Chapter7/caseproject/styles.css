@@ -1,0 +1,219 @@
+/*
+    Author: colbystewart
+    Date: 3/23/2023
+    Filename: style.css
+*/
+
+/*Reset CSS styles*/
+body, header, nav, main, footer, h1, div, img{
+   margin: 0;
+   padding: 0;
+   border: 0;
+ }
+ 
+ /* Styles for all pages: body,  img, header, nav, main */
+ body {
+   background-color: #000000;
+ }
+ 
+ img{
+   max-width: 100%;
+   display: block;
+ }
+ 
+ header{
+   width: 50%;
+   float: left;
+ }
+ header img{
+   margin: 0 auto;
+ }
+ /*show mobile class hide tablet desktop class*/
+ .mobile{
+   display: block;
+ }
+ .tablet-desktop{
+   display: none;
+ }
+ 
+ 
+ nav{
+   float:left;
+   margin: 5em 20em 0 0;
+   padding: 1%;
+   margin-bottom: 1%;
+ }
+ 
+ nav ul{
+   list-style-type: none; /*no bullet on my list items*/
+   margin: 0;
+   text-align: center;
+ }
+ 
+ nav li{
+   display: inline-block;
+   font-size: 1.5em;
+   font-family: "Gloock";
+   border-top: 4px solid #faf8f8;
+ }
+ 
+ nav li a{
+   display: inline-block;
+   color: #fff;
+   text-align: center;
+   padding: 0.5em 1em; /*top-bottom: 0.5 em, left-right: 1em */
+   text-decoration: none; /*remove underline from link*/
+ }
+ 
+ nav li:first-child{
+   border-top: none;  
+ }
+ 
+ .round{
+   border-radius: 20px;
+ }
+ 
+ main{
+   clear: left;
+   background-color: #01aa0f91;
+   color: #fff;
+   padding: 2%;
+   font-size: 1.25em;
+   max-width: 100%;
+   font-family: "Mynerve";
+ }
+ 
+ .external-link{
+   color: #f31404;
+   font-weight: bold;
+   text-decoration: none;
+ }
+ 
+ /* Contact page styles */
+ #contact{
+   text-align: center;
+ }
+ 
+ #contact a{
+   color: #666600;
+   text-decoration: none;
+ }
+ 
+ .map{
+   border: 8px solid #000;
+   width: 95%;
+   height: 50%;
+ }
+ 
+ /* Footer styles for all pages */
+ footer p {
+   font-size: 0.75em;
+   text-align: center;
+   color: #fff;
+   padding: 0 1em;
+ }
+ 
+ footer p a {
+   color: #fff;
+   text-decoration: none;
+ }
+ 
+ @media only screen and (min-width: 630px), print {
+   /*Tablet Viewport: Show tablet-desktop class, hide mobile class*/
+   .tablet-desktop{
+     display: block;
+   }
+   .mobile{
+     display: none;
+   }
+   /*Tablet Viewport: style rule for header*/
+   header{
+     width: 25%;
+     float: left;
+     padding-bottom: 0;
+     }
+     /*desktop viewport: style rules for the nav area*/
+   nav{
+     float: right;
+     width: 70%;
+     margin: 4em 1em 0 0;
+     }
+   nav ul{
+     text-align: right;
+     }
+   nav li{
+     border: none;
+     }
+   nav li a:hover{
+     color: rgb(245, 9, 9);
+     background-color: #141414;
+     border-radius: 20px;
+     }
+   nav li:last-child{
+     border-right: none;
+   }
+   nav li a{
+     padding: 0.1em .70em;
+   }
+   /*Tablet Viewport: Style rules for the main content area*/
+   .map{
+     width: 600px;
+     height: 450px;
+   }
+   }
+   /*Media query for desktop viewport*/  /*769px*/
+ @media only screen and (min-width: 1015px), print{
+   /*desktop viewport: style rule for header*/
+   header{
+     width: 25%;
+     float: left;
+     padding-bottom: 0;
+     }
+     /*desktop viewport: style rules for the nav area*/
+   nav{
+     float: right;
+     width: 50%;
+     margin: 4em 1em 0 0;
+     }
+   nav ul{
+     text-align: center;
+     }
+   nav li{
+     border: none;
+     }
+   nav li a{
+     padding: 0.5em 1em;
+     }
+   nav li a:hover{
+     color: rgb(245, 9, 9);
+     background-color: #0d0e0d;
+     border-radius: 20px;
+     }
+     article li a:hover{
+      color: #000;
+     }
+    
+   /*desktop viewport: style rules for the main area*/
+  
+   }
+ 
+   /*media query for large desktop viewport*/
+ @media only screen and (min-width: 1921px){
+   #container{
+     width: 1920px;
+     margin: 0 auto;
+     }
+     
+   }
+ 
+   /*media query for printing*/
+ @media print{
+   body{
+     background-color: #f2f2f2;
+     color: #000;
+     }
+   nav li a{
+     color: #000;
+     }
+   } 
+ 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Submitmission</title>
+   <script>
+      window.addEventListener("load", function(){   
+         // Retrieve the field/value pairs from the URL
+         var formData = location.search.slice(1);
+         formData = formData.replace(/\+/g," ");
+         formData = decodeURIComponent(formData);
+         let formFields = formData.split(/[&=]/g);
+
+         // Write the field values to the account table
+         document.getElementById("username").textContent = formFields[1]; 
+         document.getElementById("pwd").textContent = formFields[3]; 
+         document.getElementById("Dog").textContent = formFields[5];
+         document.getElementById("Tiger").textContent = formFields[7]; 
+         document.getElementById("Bird").textContent = formFields[9]; 
+         document.getElementById("Lion").textContent = formFields[11]; 
+         document.getElementById("Hippo").textContent = formFields[13];           
+      } );   
+   </script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Validation
+      </h1>
+   </header>
+
+   <section>
+      <h1>Account Information</h1>
+      <table id="account">
+         <tr>
+            <td>Username</td>
+            <td><span id="username"></span></td>
+         </tr>
+         <tr>
+            <td>Password</td>
+            <td><span id="pwd"></span></td>
+         </tr>
+         <tr>
+            <td>Favorite Animal: </td>
+            <td><span id="Dog"></span></td>
+         </tr>
+         <tr>
+            <td>Favorite Animal: </td>
+            <td><span id="Tiger"></span></td>
+         </tr>
+         <tr>
+            <td>Favorite Animal: </td>
+            <td><span id="Bird"></span></td>
+         </tr>
+         <tr>
+            <td>Favorite Animal: </td>
+            <td><span id="Lion"></span></td>
+         </tr>
+         <tr>
+            <td>Favorite Animal: </td>
+            <td><span id="Hippo"></span></td>
+         </tr>
+      </table>
+   </section>
+   <p><a href="https://colby993.github.io/Clientside2023/Chapter7/" title="Chapter7 Homepage">Chapter7</a></p>
+</body>
+</html>

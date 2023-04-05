@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Validation </title>
+	<script src="Animals.js"defer></script>
+	<link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+	
+	<header>
+		<h1>Validation</h1>
+	</header>
+	<!--The nav shows the links to other pages of my website-->
+	<nav>
+		<ul>
+		<p>
+			<li><a href="Animals.html">Homepage</a></li>
+			<li><a href="AfricanAnimals.html">Africa Animals </a></li>
+			<li><a href="Websecurity.html">Web security</a></li>
+			<li><a href="Bestweather.html">Best weather for animals</a></li>
+            <li><a href="Validation.html">Validation</a></li>
+		</p>
+	</ul>
+	</nav>
+	
+<main>
+	<section>
+		<section>
+			<h1>Create your Account</h1>
+			<form id="signup" name="signup" method="get" action="submit.html">
+			   <fieldset>
+				  <legend>Enter your Account Information</legend>
+				  <label for="username">Username</label>
+				  <input type="text" id="username" name="username" required />
+	  
+				  <label for="pwd">Password</label>
+				  <input type="password" id="pwd" name="pwd" required /> 
+				  <div id="feedback"></div>
+                <legend>More info</legend>
+                <p>What's your favorite animal?</p>
+                <label for="Dog">
+                    <input type="checkbox" name="animal" id="Dog" value="Dog">Dog
+                </label>
+                <label for="Tiger">
+                    <input type="checkbox" name="animal" id="Tiger" value="Tiger">Tiger
+                </label>
+                <label for="Bird">
+                    <input type="checkbox" name="animal" id="Bird" value="Bird">Bird
+                </label>
+		<label for="Lion">
+                    <input type="checkbox" name="animal" id="Lion" value="Lion">Lion
+                </label>
+				<label for="Hippo">
+                    <input type="checkbox" name="animal" id="Hippo" value="Hippo">Hippo
+                </label> 
+				</fieldset>        
+			  <input type="submit" id="submitButton" value="Save" />
+		   </fieldset>
+		</form>
+	 </section>
+	
+</main>
+	<footer>
+ 
+		<p> &copy; Copyright 2023. All Rights Reserved.</p>
+		<p>Animalkingdom@club.net</p>
+	</footer>
+</body>
+</html>
